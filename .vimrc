@@ -66,11 +66,16 @@ au BufNewFile,BufRead *.js, *.html, *.css
 :syntax enable
 
 " WSL Clipboard support
-let s:clip = 'which clip.exe'
+let s:clip = systemlist('which clip.exe')[0]
 if executable(s:clip)
     augroup WSLYank
         autocmd!
         autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
     augroup END
+end
+
+let s:g_clip = systemlist('which powershell.exe')[0]
+if executable(s:g_clip)
+    map <silent> "=p :r !powershell.exe -Command Get-Clipboard<CR>
 end
 
