@@ -76,6 +76,6 @@ end
 
 let s:g_clip = systemlist('which powershell.exe')[0]
 if executable(s:g_clip)
-    map <silent> "=p :r !powershell.exe -Command Get-Clipboard<CR>
+    map <silent> "=p :r !powershell.exe -noprofile -noninteractive -Command Get-Clipboard<CR>
 end
 
