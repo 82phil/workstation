@@ -44,6 +44,13 @@ fi
 
 https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx
 
+# Update default editor
+
+add in .bashrc
+
+```bash
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 ## Other Stuff
 
