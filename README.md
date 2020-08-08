@@ -4,7 +4,7 @@ Everything you need to get up and running from scratch in minutes
 
 ## Configuration Files
 
-Easy peasy, just copy them over to your `~`
+Easy peasy, just run `./setup.sh`
 
 # WSL
 
@@ -26,32 +26,11 @@ https://docs.microsoft.com/en-us/virtualization/community/team-blog/2017/2017120
 
 ## Powerline for WSL
 
-```
-sudo apt install golang-go
-go get -u github.com/justjanne/powerline-go
-```
-
-```
-GOPATH=$HOME/go
-function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $?)"
-}
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-```
-
+Update the fonts used for the Windows Console and the Terminal
 
 https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx
-
-# Update default editor
-
-add in .bashrc
-
-```bash
-export VISUAL=vim
-export EDITOR="$VISUAL"
 
 ## Other Stuff
 
 https://github.com/sirredbeard/Awesome-WSL
+
