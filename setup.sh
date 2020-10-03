@@ -21,7 +21,7 @@ sudo apt install -y socat docker.io
 go get -u github.com/justjanne/powerline-go
 
 # Setup bashrc
-echo -e \
+echo \
     "\n################################################################################" \
     "\n# My Additons" \
     "\n################################################################################" \
