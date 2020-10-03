@@ -65,6 +65,10 @@ au BufNewFile,BufRead *.js, *.html, *.css
 :set scrolloff=3
 :syntax enable
 
+" Spellcheck Underline
+:highlight clear spellbad
+:highlight spellbad cterm=underline ctermfg=green
+
 " WSL Clipboard support
 let s:clip = systemlist('which clip.exe')[0]
 if executable(s:clip)
