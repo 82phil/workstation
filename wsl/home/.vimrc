@@ -1,4 +1,5 @@
 " General
+
 :set nocompatible
 :filetype off
 :set backspace=indent,eol,start
@@ -24,10 +25,9 @@ Plugin 'gmarik/Vundle.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
 " User Interface
 :set number
-:colorscheme industry 
+:colorscheme industry
 :set cursorline
 :highlight CursorLine guibg=lightblue ctermbg=blue
 :set spell
@@ -64,4 +64,22 @@ au BufNewFile,BufRead *.js, *.html, *.css
 :set linebreak
 :set scrolloff=3
 :syntax enable
+
+" Spellcheck Underline
+:highlight clear spellbad
+:highlight spellbad cterm=underline ctermfg=green
+
+" WSL Clipboard support
+let s:clip = systemlist('which clip.exe')[0]
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+    augroup END
+end
+
+let s:g_clip = systemlist('which powershell.exe')[0]
+if executable(s:g_clip)
+    map <silent> "=p :r !powershell.exe -noprofile -noninteractive -Command Get-Clipboard<CR>
+end
 

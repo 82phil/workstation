@@ -1,0 +1,71 @@
+{
+    "editor.renderWhitespace": "none",
+    "editor.rulers": [100, 101],
+    "editor.minimap.enabled": false,
+    "cSpell.ignoreRegExpList": [
+        "(from|import) .+"
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["u"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo",
+                    "args": []
+                }
+    
+            ]
+        },
+        {
+            "before": ["<C-r>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "redo",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "breadcrumbs.enabled": true,
+    "git.enableSmartCommit": true,
+    "editor.renderControlCharacters": false,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "feature",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "workbench.colorTheme": "Monokai",
+    "files.eol": "\n",
+    "extensions.ignoreRecommendations": false,
+    "terminal.integrated.scrollback": 5000,
+}
