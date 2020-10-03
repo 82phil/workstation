@@ -1,9 +1,9 @@
 # Initial setup
 sudo apt-get update
 
-cp home/.vimrc ~
-cp home/.tmux.conf ~
-cp home/.bash_additions ~
+cp wsl/home/.vimrc ~
+cp wsl/home/.tmux.conf ~
+cp wsl/home/.bash_additions ~
 
 # Needed for a few tools
 sudo apt-get install -y golang-go

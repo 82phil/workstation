@@ -1,21 +1,30 @@
 # Introduction
 
-Everything you need to get up and running from scratch in minutes
+Instantly set up bash, tmux, vim, etc on your new workstation for:
 
-## Configuration Files
+- Sharing the clipboard between Windows and WSL
+- Mouse support
+- Quality of life improvements for bash
+- Supporting Docker bindings from WSL
+- Tricks to save seconds
 
-Easy peasy, just run `./setup.sh`
+# Installation
 
-# WSL
+## Most of it
 
-## Setting up Git
+```bash
+./setup.sh
+. ~/.bashrc
+```
 
-VS Code will have issues running WSL Git from the Windows side, there
-is however a workaround, follow here:
+In addition there are files under `wsl/` and `windows/` to configure WSL
+and tools in Windows.
+
+## Git on Windows
+
+Use this tool to use Git from WSL in Windows.
 
 https://github.com/andy-5/wslgit
-
-Note the following:
 
 If you are going to setup WSL to change `/mnt/c` -> `/c`  for Windows directories
 under WSL then setup wslgit to use the same path.
@@ -34,3 +43,10 @@ https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerl
 
 https://github.com/sirredbeard/Awesome-WSL
 
+# Backup your setup
+
+There is also a script to backup changes to configuration files.
+
+```bash
+./backup.sh
+```

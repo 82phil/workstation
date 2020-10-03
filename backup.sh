@@ -1,4 +1,4 @@
 # Bakcup configurations
-cp ~/.bash_additions ./home/
-cp ~/.tmux.conf ./home/
-cp ~/.vimrc ./home/
+cp ~/.bash_additions ./wsl/home/
+cp ~/.tmux.conf ./wsl/home/
+cp ~/.vimrc ./wsl/home/
