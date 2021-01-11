@@ -27,7 +27,7 @@ filetype plugin indent on    " required
 
 " User Interface
 :set number
-:colorscheme industry
+:colorscheme default
 :set cursorline
 :highlight CursorLine guibg=lightblue ctermbg=blue
 :set spell
@@ -35,7 +35,7 @@ filetype plugin indent on    " required
 :set ruler
 :set relativenumber
 :set mouse=a
-:set background=dark
+:set background=light
 :set title
 
 " Indentation
