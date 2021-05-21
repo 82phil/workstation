@@ -27,7 +27,6 @@ filetype plugin indent on    " required
 
 " User Interface
 :set number
-:colorscheme default
 :set cursorline
 :highlight CursorLine guibg=lightblue ctermbg=blue
 :set spell
@@ -37,6 +36,7 @@ filetype plugin indent on    " required
 :set mouse=a
 :set background=light
 :set title
+:colorscheme slate
 
 " Indentation
 :set tabstop=4
