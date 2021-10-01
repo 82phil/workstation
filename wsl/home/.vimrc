@@ -34,9 +34,9 @@ filetype plugin indent on    " required
 :set ruler
 :set relativenumber
 :set mouse=a
-:set background=light
 :set title
 :colorscheme slate
+:set background=light
 
 " Indentation
 :set tabstop=4
