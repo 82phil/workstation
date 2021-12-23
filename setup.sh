@@ -6,6 +6,8 @@ cp wsl/home/.tmux.conf ~
 cp wsl/home/.bash_additions ~
 
 # Needed for a few tools
+# https://github.com/golang/go/wiki/Ubuntu
+sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get install -y golang-go
 
 # Install Vim Plugins
