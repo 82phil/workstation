@@ -14,3 +14,16 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Attempt to get docker-relay to startup
+if ! (ps -fC socat | grep -q socat); then
+    echo "Starting ./docker-relay"
+    sudo -n ./docker-relay &
+    if [ $? = 0 ]; then
+        # This is likely the first session, so bring up anything else
+        tmux
+    else
+        # Add to /etc/sudoers.d/<some_file>
+        # %sudo   ALL=NOPASSWD: <path_to_docker_relay>
+        echo "Failed to start docker-relay"
+    fi
+fi
