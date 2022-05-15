@@ -34,9 +34,9 @@ filetype plugin indent on    " required
 :set ruler
 :set relativenumber
 :set mouse=a
-:set background=light
 :set title
 :colorscheme slate
+:set background=light
 
 " Indentation
 :set tabstop=4
@@ -44,11 +44,11 @@ filetype plugin indent on    " required
 :set shiftwidth=4
 
 au BufNewFile,BufRead *.py
-    \ set textwidth=79
+    \ set textwidth=120
 
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
+au BufNewFile,BufRead *.js,*.html,*.css,*.yml
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
     \ set shiftwidth=2
 
 :set expandtab
@@ -82,4 +82,5 @@ let s:g_clip = systemlist('which powershell.exe')[0]
 if executable(s:g_clip)
     map <silent> "=p :r !powershell.exe -noprofile -noninteractive -Command Get-Clipboard<CR>
 end
+
 

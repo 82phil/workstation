@@ -16,6 +16,9 @@ sudo apt-get install -y git
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 
+# Install iostat
+sudo apt install -y sysstat
+
 # Install Docker Client
 sudo apt install -y socat docker.io
 
@@ -23,7 +26,7 @@ sudo apt install -y socat docker.io
 go get -u github.com/justjanne/powerline-go
 
 # Setup bashrc
-echo \
+echo -e \
     "\n################################################################################" \
     "\n# My Additons" \
     "\n################################################################################" \
