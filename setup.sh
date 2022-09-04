@@ -23,7 +23,7 @@ sudo apt install -y sysstat
 sudo apt install -y socat docker.io
 
 # Install Powerline Go
-go get -u github.com/justjanne/powerline-go
+go install github.com/justjanne/powerline-go@latest
 
 # Setup bashrc
 echo -e \
