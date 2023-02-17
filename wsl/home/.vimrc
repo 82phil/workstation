@@ -18,7 +18,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
-
+Plugin 'will133/vim-dirdiff'
 " ...
 
 " All of your Plugins must be added before the following line
@@ -36,7 +36,7 @@ filetype plugin indent on    " required
 :set mouse=a
 :set title
 :colorscheme slate
-:set background=light
+:set background=dark
 
 " Indentation
 :set tabstop=4

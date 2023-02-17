@@ -1,16 +1,21 @@
-# After each command, save history
-export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
 # Setup Powerline Go
 GOPATH=$HOME/go
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -hostname-only-if-ssh -error $?)"
 }
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+
+# Be sure to do this once, otherwise it just gets appended to
+if [[ -z "${PROMPT_COMMAND}" ]]; then
+    # After each command, save history
+    export PROMPT_COMMAND="(history -a &); $PROMPT_COMMAND"
+
+    # And setup PS1 to call powerline-go
+   if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+           PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+   fi
 fi
 
-# Setup VIM as desired editor
+# Sep VIM as desired editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
