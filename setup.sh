@@ -6,6 +6,8 @@ cp wsl/home/.tmux.conf ~
 cp wsl/home/.bash_additions ~
 
 # Needed for a few tools
+# https://github.com/golang/go/wiki/Ubuntu
+sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get install -y golang-go
 
 # Install Vim Plugins
@@ -21,7 +23,7 @@ sudo apt install -y sysstat
 sudo apt install -y socat docker.io
 
 # Install Powerline Go
-go get -u github.com/justjanne/powerline-go
+go install github.com/justjanne/powerline-go@latest
 
 # Setup bashrc
 echo -e \
